@@ -1,0 +1,105 @@
+/* Variable Colors Used */
+:root {
+  --purple: rgb(65, 3, 65);
+  --black: black;
+  --white: white;
+  --teal: teal;
+  --gray: gray;
+}
+
+/* Universal Selector */
+* {
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+/* Style the navigation menu */
+.topnav {
+  overflow: hidden;
+  background-color: var(--black);
+  position: fixed;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #links {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: var(--white);
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  background: var(--black);
+  color: var(--white);
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  font-size: 2.25rem;
+}
+
+/* Nav Bar Fixed to the Top of Page */
+.fixed {
+  margin: auto;
+  width: 100%;
+}
+
+#links {
+  color: var(--purple);
+}
+
+/* Navigation Menu Display and Font */
+.nav_links {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  font-size: 28px;
+  font-weight: bolder;
+  list-style: none;
+}
+
+/* Link Decorations */
+a:link {
+  color: var(--white);
+  text-shadow: 1px var(--purple);
+  font-size: bolder;
+}
+
+/* Link Visited Decorations */
+a:visited {
+  color: var(--white);
+  text-shadow: 1px var(--white);
+}
+
+/* Link Hover Decorations */
+a:hover {
+  color: var(--purple);
+  font-size: bolder;
+}
+
+/* Link Active Decorations */
+a:active {
+  color: var(--purple);
+  text-shadow: 1px var(--white);
+}
+
+.jumbotron {
+  background-color: var(--purple);
+}
+
+.content-post {
+  text-align: center;
+}
