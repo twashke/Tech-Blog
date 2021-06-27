@@ -1,0 +1,33 @@
+[
+    {
+        "text": "I read about this and it blew my mind!",
+        "user_id": 1,
+        "post_id": 1
+    },
+    {
+        "text": "Wow, I can't believe this happened!",
+        "user_id": 1,
+        "post_id": 1
+    },
+    {
+        "text": "Looking forward to trying this application!",
+        "user_id": 2,
+        "post_id": 2
+    },
+    {
+        "text": "Awesome! What a cool idea!",
+        "user_id": 2,
+        "post_id": 2
+    },
+    {
+        "text": "How cool, we were just discussing this in class!",
+        "user_id": 3,
+        "post_id": 3
+    },
+    {
+        "text": "The more I read about this, the more interested I am!",
+        "user_id": 4,
+        "post_id": 4
+    }
+]
+
