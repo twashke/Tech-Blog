@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CMS Tech Blog</title>
+    <!-- CSS for Bootstap and Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/c3beaf856b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/jass.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+    <header>
+                <!-- Top of Page Navigtion Menu  -->
+                <nav> 
+                    <div class="fixed">
+                        <ul class="nav_links">
+                            <li class="empty_space"></li>
+                            <li><a href="/">Homepage</a></li>
+                            {{#if logged_in}}
+                            <button class="no-button" id="logout">logout</button>
+                            {{else}}
+                            <li><a href="/login">Login</a></li>
+                            {{/if}}
+                            <li><a href="/dashboard">Dashboard</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- Fixed Navigation Menu -->
+                <div class="topnav">
+                <!-- Navigation links (hidden by default) -->
+                <div id="links">
+                    <a href="/"></a>
+                    <a href="/">Homepage</a>
+                    <a href="/login">Login</a>
+                    <a href="/dashboard">Dashboard</a>
+                </div>
+                <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i></a>
+                </div>
+    </header>
+    <body> 
+        <!-- Jumbotron for Tech Blog Header -->
+        <div class="container .bg-danger">
+            <div class="jumbotron jumbotron-fluid">
+                <h1 class="display-4 text-center"><span class="fas fa-chalkboard-teacher"></span> CMS Tech Blog</h1>
+            </div>
+        </div>
+
+        <main class="container container-fluid mt-5">
+            <!-- Render the sub layout -->
+            {{{ body }}}
+        </main>
+
+
+        
+
+
+
+
+    <!-- Render script for logged in users only -->
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
+
+
+
+    <!-- Javascript -->
+    <script src="/js/navBar.js"></script>
+    </body>
+</html>
