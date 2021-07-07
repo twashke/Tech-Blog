@@ -2,7 +2,6 @@
 const router = require('express').Router();
 // Declare Required Models
 const { Comment } = require('../../models');
-const sequelize = require("../../config/connection");
 const withAuth = require("../../utils/auth");
 
 // -----------------------------------------|
@@ -10,7 +9,7 @@ const withAuth = require("../../utils/auth");
 // -----------------------------------------|
 
 // Find All Comments
-router.get("/", async (req, res) => {
+router.get("/", withAuth, async (req, res) => {
     try {
         // Declare variable
         const commentData = await Comment.findAll({
@@ -25,7 +24,7 @@ router.get("/", async (req, res) => {
 });
 
 // Create a new Comment
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
     try {
     // Declare variable
     const commentData = await Comment.create(
@@ -44,7 +43,7 @@ router.post('/', async (req, res) => {
 });
 
 // Update a Post by its "id" value
-router.put("/:id", async (req, res) => {
+router.put("/:id", withAuth, async (req, res) => {
     try {
     // Declare variable
     const commentData = await Comment.update({
@@ -69,7 +68,7 @@ router.put("/:id", async (req, res) => {
 });
 
 // Delete a Comment by its "id" value
-router.delete("/:id", async (req, res) => {
+router.delete("/:id", withAuth, async (req, res) => {
     try {
         // Declare variable
         const commentData = await Comment.destroy({
