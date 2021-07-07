@@ -68,15 +68,14 @@ router.put("/:id", async (req, res) => {
     }
 });
 
-//   DELETE STILL NOT WORKING 
-//   UGHHHHHHHHHHHHHHHHHHHHH!
-
 // Delete a Comment by its "id" value
 router.delete("/:id", async (req, res) => {
     try {
         // Declare variable
         const commentData = await Comment.destroy({
-
+            where: {
+                id: req.params.id,
+            }
     });
     // If specified id is not found, send 404 response and message
     if (!commentData) {
