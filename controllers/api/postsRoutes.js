@@ -1,9 +1,7 @@
 // Declare Express Router Variable
 const router = require('express').Router();
 // Declare Required Models
-const { Post, Comment, User } = require('../../models');
-const sequelize = require("../../config/connection");
-const withAuth = require("../../utils/auth");
+const { Post, User } = require('../../models');
 
 // -----------------------------------------|
 //            API Posts Endpoint            | 
@@ -20,10 +18,7 @@ router.get("/", async (req, res) => {
           { model: User,
             attributes: ["id", "username"]
           }, 
-          {
-            model: Comment,
-            attributes: ["id", "text","user_id", "post_id", ]
-          }]
+        ]
       });
       // Return OK Status and data
       res.status(200).json(postData);
@@ -43,10 +38,7 @@ router.get("/:id", async (req, res) => {
           { model: User,
             attributes: ["id", "username"]
           }, 
-          {
-            model: Comment,
-            attributes: ["id", "text","user_id", "post_id", ]
-          }]
+        ]
       });
     // If specified id is not found, send 404 response and message
     if (!postData) {
