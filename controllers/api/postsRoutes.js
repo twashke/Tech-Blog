@@ -105,9 +105,6 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-//   DELETE STILL NOT WORKING 
-//   UGHHHHHHHHHHHHHHHHHHHHH!
-
 // Delete a Post by its "id" value
 router.delete("/:id", async (req, res) => {
   try {
