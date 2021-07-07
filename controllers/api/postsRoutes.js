@@ -113,7 +113,9 @@ router.delete("/:id", async (req, res) => {
   try {
     // Declare variable
     const postData = await Post.destroy({
-
+      where: {
+        id: req.params.id,
+    },
     });
     // If specified id is not found, send 404 response and message
     if (!postData) {

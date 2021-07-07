@@ -75,7 +75,7 @@ router.delete("/:id", async (req, res) => {
         const commentData = await Comment.destroy({
             where: {
                 id: req.params.id,
-            }
+            },
     });
     // If specified id is not found, send 404 response and message
     if (!commentData) {
