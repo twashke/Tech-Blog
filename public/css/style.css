@@ -1,6 +1,7 @@
 /* Variable Colors Used */
 :root {
   --purple: rgb(65, 3, 65);
+  --lightpurple: rgb(218, 162, 218);
   --black: black;
   --white: white;
   --teal: teal;
@@ -11,6 +12,17 @@
 * {
   font-family: "Roboto", sans-serif;
   text-decoration: none;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.post-info {
+  color: var(--black);
+  text-align: center;
+  background-color: whitesmoke;
+  border: 5px solid var(--black);
 }
 
 body {
