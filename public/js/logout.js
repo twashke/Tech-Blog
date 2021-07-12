@@ -4,6 +4,7 @@ const logout = async () => {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
     });
+    console.log(response);
 
     // Return to homepage on logout
     if (response.ok) {
