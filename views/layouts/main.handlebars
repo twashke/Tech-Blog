@@ -15,11 +15,11 @@
                     <div class="fixed">
                         <ul class="nav_links">
                             <li class="empty_space"></li>
-                            <li><a href="/">Homepage</a></li>
+                            <li><a href="/">Home</a></li>
                             <li><a href="/dashboard">Dashboard</a></li>
-                            <li><a href="/dashboard/add">Add Post</a></li>
+
                             {{#if loggedIn}}
-                            <li><a href="/logout" id="logout">Logout</a></li>
+                            <li><a href="#" id="logout">Logout</a></li>
                             {{else}}
                             <li><a href="/login">Login</a></li>
                             {{/if}}
@@ -31,9 +31,8 @@
                 <!-- Navigation links (hidden by default) -->
                 <div id="links">
                     <a href="/"></a>
-                    <a href="/">Homepage</a>
+                    <a href="/">Home</a>
                     <a href="/dashboard">Dashboard</a>
-                    <a href="/dashboard/add">Add Post</a>
                     {{#if loggedIn}}
                     <a href="/logout" id="logout">Logout</a>
                     {{else}}
@@ -74,7 +73,7 @@
 
 
     <!-- Render script for logged in users only -->
-    {{#if logged_in}}
+    {{#if loggedIn}}
     <script src="/js/logout.js"></script>
     {{/if}}
 
