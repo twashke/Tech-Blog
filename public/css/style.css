@@ -31,7 +31,26 @@
   border: 5px solid var(--black);
 }
 
+.add-new {
+  color: var(--black);
+}
+
 button a:link {
+  text-decoration: none;
+  color: var(--black);
+}
+
+button a:visited {
+  text-decoration: none;
+  color: var(--black);
+}
+
+button a:hover {
+  text-decoration: none;
+  color: var(--black);
+}
+
+button a:active {
   text-decoration: none;
   color: var(--black);
 }
