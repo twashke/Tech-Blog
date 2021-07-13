@@ -12,7 +12,7 @@ router.get("/", withAuth, async (req, res) => {
                include: [
                     {
                          model: Post,
-                         attributes: ["id", "title", "content", "user_id"],
+                         attributes: ["id", "title", "content", "user_id", "created_at"],
                     },
                ],
           });

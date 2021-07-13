@@ -23,6 +23,11 @@
   color: var(--black);
 }
 
+.post-info a:visited {
+  text-decoration: none;
+  color: var(--black);
+}
+
 .post-info {
   text-decoration: none;
   color: var(--black);
@@ -33,10 +38,6 @@
 
 .add-new {
   color: var(--black);
-}
-
-.addPost {
-  font-size: 2rem;
 }
 
 .welcome {

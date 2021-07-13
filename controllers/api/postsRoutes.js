@@ -60,7 +60,7 @@ router.post('/', async (req, res) => {
   const postData = await Post.create({
     title: req.body.title,
     content: req.body.content,
-    user_id: req.body.user_id
+    user_id: req.session.user_id
     // user_id: req.session.user_id 
   });
   // Return OK Status and data

@@ -1,24 +1,31 @@
 <section class="container">
     <div class="flex-row justify-center">
+      <div class="flex-column d-flex justify-content-around">
     <h2 class="welcome">Welcome {{userPosts.username}}!</h2>
     <hr>
-    <button type="submit" class="btn add-new"><a class="link" href="/dashboard/add">Add New Post!</button></a>
-
-{{#if posts.length}}
-
-  <h3 class="p-2">Your Posts</h3>
-    {{#each posts as |post|}}
-      {{> dashboard-post-info post}}
-  {{/each}}
-  
-  {{else}}
-    <div class="flex-row justify-center">
-      <h3 class="p-2">Add Your First Post!</h3>
-      <img src="/images/tech-blog.jpeg" alt="">
+    <button type="submit" class="btn add-new mb-3"><a class="link" href="/dashboard/add">Add New Post!</button></a>
+      </div>
+{{#if userPosts.posts.length}}
+    <div class="container">
+          {{#each userPosts.posts}}
+        <div class="flex-row justify-center">
+        <div class="card w-100 post-info">
+            <div class="card-body pt-2 pl-4 pr-4">
+                <h3><a class="card-title link" href="/dashboard/update/{{id}}">{{title}}</a></h3>
+                <hr>
+                <p class="card-text">{{content}}</p>
+                <hr>
+            </div>
+        </div>
     </div>
-  </div>
-
+    {{else}}
+      <div class="flex-row justify-center">
+        <h3 class="p-2">Add Your First Post!</h3>
+      <img src="/images/tech-blog.jpeg" alt="">
+      </div>
+    </div>
+  {{/each}}
 {{/if}}
-
 </section>
+
 
