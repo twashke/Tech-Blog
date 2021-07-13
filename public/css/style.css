@@ -18,11 +18,22 @@
   font-weight: bold;
 }
 
+.post-info a:link {
+  text-decoration: none;
+  color: var(--black);
+}
+
 .post-info {
+  text-decoration: none;
   color: var(--black);
   text-align: center;
   background-color: whitesmoke;
   border: 5px solid var(--black);
+}
+
+button a:link {
+  text-decoration: none;
+  color: var(--black);
 }
 
 body {
