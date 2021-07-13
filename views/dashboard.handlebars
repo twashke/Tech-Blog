@@ -5,19 +5,23 @@
     <hr>
     <button type="submit" class="btn add-new mb-3"><a class="link" href="/dashboard/add">Add New Post!</button></a>
       </div>
-{{#if userPosts.posts.length}}
-    <div class="container">
+    <div class="container user-posts">
           {{#each userPosts.posts}}
         <div class="flex-row justify-center">
-        <div class="card w-100 post-info">
+        <div class="card w-100 post-info" id="postInfo">
             <div class="card-body pt-2 pl-4 pr-4">
                 <h3><a class="card-title link" href="/dashboard/update/{{id}}">{{title}}</a></h3>
                 <hr>
                 <p class="card-text">{{content}}</p>
                 <hr>
+          <div class="pt-2 flex-row justify-space-between">
+                <button type="link" class="btn"><a class="link" href="/dashboard/update">Update Post</button></a>
+                <button type="submit" data-id="{{id}}" class="btn bg-danger text-white" id="delete">Delete Post</button>
+          </div>
             </div>
         </div>
-    </div>
+    </div> 
+  <script src="/js/deletePost.js"></script>   
     {{else}}
       <div class="flex-row justify-center">
         <h3 class="p-2">Add Your First Post!</h3>
@@ -25,7 +29,6 @@
       </div>
     </div>
   {{/each}}
-{{/if}}
-</section>
+
 
 
