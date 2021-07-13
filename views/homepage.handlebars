@@ -1,25 +1,9 @@
-  
-  <!-- Post Section -->
-  {{#each posts as |post|}}
-  <section class="container">
-    <div class="flex-row justify-center">
-        <div class="card w-100 post-info">
-            <div class="card-body pt-2 pl-4 pr-4">
-                <h4 class="d-flex justify-content-end"><i class="fas fa-user pr-3"></i>Posted By: {{user.username}}</h4>
-                <h3 class="card-title">{{title}}</h3>
-                <hr>
-                <p class="card-text">{{content}}</p>
-                <hr>
-                <div class="d-flex justify-content-end">
-                <h6 class="">Created: {{format_date createdAt}}</h6>
-            </div>
-        </div>
-    </section>
-    {{/each}}
-  
-  
+{{#each posts as |post|}}
+    {{> post-info post}}
+{{else}}
 <section class="container">
     <div class="flex-row justify-center">
         <img src="/images/tech-blog.jpeg" alt="">
     </div>
 </section>
+{{/each}}
