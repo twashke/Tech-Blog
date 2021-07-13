@@ -1,19 +1,19 @@
 <section class="container">
     <div class="flex-row justify-center">
-    <h2>Welcome {{username}}!</h2>
+    <h2 class="welcome">Welcome {{userPosts.username}}!</h2>
     <hr>
     <button type="submit" class="btn add-new"><a class="link" href="/dashboard/add">Add New Post!</button></a>
 
 {{#if posts.length}}
 
-  <h3>Your Posts</h3>
+  <h3 class="p-2">Your Posts</h3>
     {{#each posts as |post|}}
       {{> dashboard-post-info post}}
   {{/each}}
   
   {{else}}
     <div class="flex-row justify-center">
-      <h3>Add Your First Post!</h3>
+      <h3 class="p-2">Add Your First Post!</h3>
       <img src="/images/tech-blog.jpeg" alt="">
     </div>
   </div>
