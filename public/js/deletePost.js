@@ -4,7 +4,7 @@ async function deletePost(event) {
         const response = await fetch(`/api/posts/${id}`, {
         method: "DELETE",
     });
-
+        console.log(response);
     if (response.ok) {
         window.location.reload();
     } else {
@@ -13,4 +13,4 @@ async function deletePost(event) {
     }
 }
 
-document.querySelector("#delete").addEventListener("click", deletePost);
+document.querySelector("#user-posts").addEventListener("click", deletePost);

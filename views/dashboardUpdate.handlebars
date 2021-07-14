@@ -1,0 +1,18 @@
+  
+<form id="updatePost" class="container">  
+  <div class="form-group">
+  <label for="post-title"><h3>Post Title: </h3></label>
+    <input class="form-input" type="text" id="update-title" name="title" value="{{post.title}}">
+  </div>
+  <div class="form-group">
+    <label for="post-content"><h3>Post Content: </h3></label>
+    <input class="form-input" id="update-content" rows="5" name="content" value="{{post.content}}">
+  </div>
+  <div class="pt-2 flex-row justify-center">
+    <button type="submit" class="btn add-new">UPDATE POST</button>
+  </div>
+</form>
+
+{{#if loggedIn}}
+  <script src="/js/updatePost.js"></script>    
+{{/if}}

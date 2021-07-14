@@ -1,11 +1,11 @@
-<section class="container">
+<div class="container">
     <div class="flex-row justify-center">
       <div class="flex-column d-flex justify-content-around">
     <h2 class="welcome">Welcome {{userPosts.username}}!</h2>
     <hr>
     <button type="submit" class="btn add-new mb-3"><a class="link" href="/dashboard/add">Add New Post!</button></a>
       </div>
-    <div class="container user-posts">
+    <div class="container" id="user-posts">
           {{#each userPosts.posts}}
         <div class="flex-row justify-center">
         <div class="card w-100 post-info" id="postInfo">
@@ -15,13 +15,13 @@
                 <p class="card-text">{{content}}</p>
                 <hr>
           <div class="pt-2 flex-row justify-space-between">
-                <button type="link" class="btn"><a class="link" href="/dashboard/update">Update Post</button></a>
+                <button  class="btn"><a class="link" href="/dashboard/update/{{id}}">Update Post</button></a>
                 <button type="submit" data-id="{{id}}" class="btn bg-danger text-white" id="delete">Delete Post</button>
           </div>
-            </div>
         </div>
-    </div> 
-  <script src="/js/deletePost.js"></script>   
+    </div>
+    </div>
+
     {{else}}
       <div class="flex-row justify-center">
         <h3 class="p-2">Add Your First Post!</h3>
@@ -30,5 +30,8 @@
     </div>
   {{/each}}
 
+  {{#if userPosts.posts}}
+    <script src="/js/deletePost.js"></script>  
+  {{/if}}
 
 

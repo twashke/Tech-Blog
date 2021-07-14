@@ -11,14 +11,14 @@ Post.init(
         autoIncrement: true,
     },
     title: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(256),
         allowNull: false,
         validate: {
             len: [1],
         },
     },
     content: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(3000),
         allowNull: false,
         validate: {
             len: [1],
