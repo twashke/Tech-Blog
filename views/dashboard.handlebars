@@ -4,18 +4,18 @@
     <hr>
     <button type="submit" class="btn add-new mb-3"><a class="link" href="/dashboard/add">Add New Post!</button></a>
       </div>
-    <div class="container" id="user-posts">
+    <div class="container">
           {{#each userPosts.posts}}
         <div class="flex-row justify-center">
-        <div class="card w-100 post-info" id="postInfo">
+        <div class="card w-100 post-info">
             <div class="card-body pt-2 pl-4 pr-4">
                 <h3><a class="card-title link" href="/dashboard/update/{{id}}">{{title}}</a></h3>
                 <hr>
                 <p class="card-text">{{content}}</p>
                 <hr>
-          <div class="pt-2 flex-row justify-space-between">
-                <button  class="btn"><a class="link" href="/dashboard/update/{{id}}">Update Post</button></a>
-                <button type="submit" data-id="{{id}}" class="btn bg-danger text-white" id="delete">Delete Post</button>
+          <div class="pt-2 flex-row justify-space-between pb-3" id="postInfo">
+                <button class="btn"><a class="link" href="/dashboard/update/{{id}}">Edit Post</button></a>
+                <h6 class="d-flex justify-content-end">Created: {{format_date created_at}}</h6>
           </div>
         </div>
     </div>
@@ -31,8 +31,6 @@
 
   </div>
 
-  {{#if userPosts.posts}}
-    <script src="/js/deletePost.js"></script>  
-  {{/if}}
+
 
 

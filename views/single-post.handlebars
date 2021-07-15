@@ -1,0 +1,54 @@
+<div class="container mb-2">
+    <h2 class="text-center">Scroll Down to View Comments or Leave One!</h2>
+</div>
+
+<div class="container">
+    <div class="flex-row justify-center">
+        <div class="card w-100 post-info">
+            <div class="card-body pt-2 pl-4 pr-4">
+                <h4 class="d-flex justify-content-end"><i class="fas fa-user pr-3"></i>Posted By: {{posts.user.username}}</h4>
+                <h3><a class="card-title link" href="/posts/{{id}}">{{posts.title}}</a></h3>
+                <hr>
+                <p class="card-text">{{posts.content}}</p>
+                <hr>
+                <h6 class="d-flex justify-content-end">Created: {{format_date posts.createdAt}}</h6>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{#if posts.comments.length}}
+<div class="container">
+    <h4 class="text-right">{{posts.comments.length}}  {{format_plural "comment" posts.comments.length}}</h4>
+</div>
+
+{{#each posts.comments}}
+    <div class="container flex-row justify-center">
+        <div class="card-body w-75 comments m-2 ml-5 mr-5 " id="comment-style">
+            <h5><a id="user-comment" class="card-text link" href="/comment/{{id}}"><i class="fas fa-user pr-3"></i>{{user.username}}</a></h5>
+        <p>{{text}}</p>
+    <h6 class="d-flex justify-content-end">Created: {{format_date created_at}}</h6>
+</div>
+</div>
+{{/each}}
+
+
+{{/if}}
+
+<div class="container">
+    <div class="container">
+        <form id="addComment">
+            <div class="form-group flex-row">
+            <label for="comment-text">Add a Comment:</label>
+                <textarea id="comment-text" name="text" class="form-control" rows="3" placeholder="Enter your comment here (required)" required></textarea></textarea>
+                <button type="submit" data-type="{{id}}" class="btn mt-2 text-center">Comment</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+{{#if loggedIn}}
+<script src="/js/addComment.js"></script>
+{{/if}}

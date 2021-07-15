@@ -36,6 +36,11 @@
   border: 5px solid var(--black);
 }
 
+#comment-style {
+  border: 2px solid var(--white);
+  color: var(--white);
+}
+
 .add-new {
   color: var(--black);
 }

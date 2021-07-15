@@ -1,5 +1,30 @@
-{{#each posts as |post|}}
-    {{> post-info post}}
+{{#each posts}}
+<div class="container">
+    <div class="flex-row justify-center">
+        <div class="card w-100 post-info">
+            <div class="card-body pt-2 pl-4 pr-4">
+                <h4 class="d-flex justify-content-end"><i class="fas fa-user pr-3"></i>Posted By: {{user.username}}</h4>
+                <h3><a class="card-title link" href="/posts/{{id}}">{{title}}</a></h3>
+                <hr>
+                <p class="card-text">{{content}}</p>
+                <hr>
+                <h6 class="d-flex justify-content-end">Created: {{format_date createdAt}}</h6>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{#if comments.length}}
+<div class="container pb-2">
+<a class="text-right link" href="/posts/{{id}}">
+    <h4>{{comments.length}}  {{format_plural "comment" comments.length}}</h4></a>
+</div>
+{{else}}
+<div class="container pb-2">
+<a class="text-right link" href="/posts/{{id}}">
+    <h4>0 comments</h4></a>
+</div>
+{{/if}}
 {{else}}
 <section class="container">
     <div class="flex-row justify-center">

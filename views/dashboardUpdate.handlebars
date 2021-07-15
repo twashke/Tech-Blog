@@ -1,5 +1,5 @@
 <div class="container text-center">
-  <h3>Update Your Post!</h3>
+  <h2>Update or Delete Your Post!</h2>
 </div>
 <form id="updatePost" class="container">  
   <div class="form-group">
@@ -10,9 +10,12 @@
     <label for="post-content"><h3>Post Content: </h3></label>
     <textarea class="form-input" id="update-content" rows="5" name="content">{{post.content}}</textarea>
   </div>
-  <div class="pt-2 flex-row justify-center">
+  <div class="pt-2 flex-row justify-space-between">
     <button type="submit" class="btn add-new">UPDATE POST</button>
+    <button type="submit" data-id="{{id}}" class="btn bg-danger text-white" id="deletePost">DELETE POST</button>
   </div>
 </form>
 
-  <script src="/js/updatePost.js"></script>    
+{{#if loggedIn}}
+  <script src="/js/updatePost.js"></script> 
+{{/if}}   

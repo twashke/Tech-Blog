@@ -1,0 +1,23 @@
+<div class="container mb-2">
+    <h2 class="text-center">Edit or Delete Your Comment!</h2>
+</div>
+<section class="container userComment">
+<div class="card-body comments m-2 ml-5 mr-5" id="comment-style">
+        <p>{{comment.text}}</p>
+        <h6 class="d-flex justify-content-end">Created: {{format_date comment.createdAt}}</h6>
+</div>
+
+<div class="container mb-2">
+        <div class="pt-2 flex-row justify-space-between">
+            <button  class="btn"><a class="link" href="/comment/update/{{comment.id}}">Update Comment</button></a>
+            <button type="submit" data-id="{{comment.id}}" class="btn bg-danger text-white" id="deleteComment">Delete Comment</button>
+</div>
+
+
+</section>
+
+
+{{#if loggedIn}}
+<script src="/js/deleteComment.js"></script>    
+{{/if}}
+

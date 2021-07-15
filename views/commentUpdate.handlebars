@@ -1,0 +1,16 @@
+<div class="container text-center">
+  <h2>Update Your Comment!</h2>
+</div>
+<form id="updateComment" class="container">  
+  <div class="form-group">
+    <label for="comment-text"><h3>Comment: </h3></label>
+    <textarea class="form-input" id="update-text" rows="5" name="text">{{comment.text}}</textarea>
+  </div>
+  <div class="pt-2 flex-row justify-center">
+    <button type="submit" class="btn add-new">UPDATE COMMENT</button>
+  </div>
+</form>
+
+{{#if loggedIn}}
+<script src="/js/updateComment.js"></script>    
+{{/if}}
