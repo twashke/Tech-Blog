@@ -1,6 +1,5 @@
-const { ExpressHandlebars } = require("express-handlebars");
-
 module.exports = {
+    // Format date for post and comments created_at
     format_date: (date) => {
         if(!date) {
             return;
@@ -9,6 +8,7 @@ module.exports = {
         return date.toLocaleDateString();
         }
     },
+    // Used to format comment to plural depending on number of comments
     format_plural: (word, amount) => {
         if (amount !==1) {
             return `${word}s`;

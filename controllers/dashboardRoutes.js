@@ -2,6 +2,10 @@ const router = require("express").Router();
 const { Post , User } = require("./../models/");
 const withAuth = require("./../utils/auth");
 
+// -----------------------------------------|
+//    DASHBOARD ROUTE - POSTS BY USER       | 
+// -----------------------------------------|
+
 router.get("/", withAuth, async (req, res) => {
      try {
           const userPost = await User.findOne({
@@ -16,6 +20,7 @@ router.get("/", withAuth, async (req, res) => {
                     },
                ],
           });
+          // Render dashboard and all data
           const userPosts = userPost.get({ plain: true });
           console.log(userPosts);
           res.render("dashboard", {
@@ -28,15 +33,26 @@ router.get("/", withAuth, async (req, res) => {
      }
 });
 
+// -----------------------------------------|
+//        DASHBOARD ROUTE - ADD POST        | 
+// -----------------------------------------|
+
 router.get("/add", (req, res) => {
+     // Render dashboard to Add Post
      res.render("dashboardAdd", {
           loggedIn: true,
      });
 });
 
+// -----------------------------------------|
+//      DASHBOARD ROUTE - UPDATE POST       | 
+// -----------------------------------------|
+
 router.get("/update/:id", async (req, res) => {
      const posts = await Post.findByPk(req.params.id);
      const post = posts.get({ plain: true });
+     // Render's dashboard to Update or Delete Post
      res.render("dashboardUpdate", { post, loggedIn: true });
 });
+
 module.exports = router;
