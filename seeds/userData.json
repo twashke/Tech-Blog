@@ -2,26 +2,26 @@
     {
         "username": "JackDaniels",
         "email": "jack@daniels.com",
-        "password": "$2b$10$vxTggYjwryH/VQTja389eem6ufCyoH.cEK5V4.S.cvnkWN/6oP/MG"
+        "password": "password12345"
    },
    {
         "username": "JimBean",
         "email": "jim@bean.com",
-        "password": "$2b$10$tx4JWmOjdHRdxknAMg31i.M5w7IqBiLmTMLwe8h.pqqzUWwTDjt36"
+        "password": "password12345"
    },
    {
         "username": "JillValentine",
         "email": "jill@valentine.com",
-        "password": "$2b$10$WifUIvwCiST75UcRuKlT6OsjFesitndiSHwq9vGYtZctYWj3bwYDC"
+        "password": "password12345"
    },
    {
         "username": "JackSkellington",
         "email": "jack@skellington.com",
-        "password": "$2b$10$atXOR3ikfGsZbLeu/v7TwOtrvyv7BrXPDKXrow3UyV.wIaITLal5q"
+        "password": "password12345"
    },
    {
      "username": "Tiffany ✌🏻",
      "email": "tiffany@me.com",
-     "password": "$2b$10$mmdjbDp.w.oD0ecg1OrvxegHy7WQkMrgY90m1hGKI/Nvd4NsIMluK"
+     "password": "password12345"
    }
 ]
