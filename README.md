@@ -95,6 +95,14 @@ Add a Comment to a Post
 User Can Access Comments to Edit
 ![Access to Edit Comments](public/images/access-to-comments.gif) \
 \
+Update Your Own Comment
+![Update Your Own Comment](public/images/update-comment.gif) \
+\
+Delete Your Own Comment
+![Delete Your Own Comment](public/images/delete-comment.gif) \
+\
+**Logout** Access Denied After
+![Denied Access After Logout](public/images/logout-access-denied.gif)
 
 ## Contributing
 
