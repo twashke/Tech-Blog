@@ -1,22 +1,27 @@
 [
     {
-        "username": "jack",
+        "username": "JackDaniels",
         "email": "jack@daniels.com",
-        "password": "$2b$10$HPcu.H61TPEWlWO51kWySuINwhtAhkkh65tFrXesb31gCbj/zBCEu"
+        "password": "$2b$10$vxTggYjwryH/VQTja389eem6ufCyoH.cEK5V4.S.cvnkWN/6oP/MG"
    },
    {
-        "username": "jose",
-        "email": "jose@cuervo.com",
-        "password": "$2b$10$C2Y9drc3RV208DIoEMNW4.J7Wa9F6v0QsBI7oiLqMvh2vnmKLCQ5i"
-   },
-   {
-        "username": "jim",
+        "username": "JimBean",
         "email": "jim@bean.com",
-        "password": "$2b$10$.vknOXafaRndzpwc4MMjzusGWNUzg5P14KvKNgiMLL96gutlaQ7Dy"
+        "password": "$2b$10$tx4JWmOjdHRdxknAMg31i.M5w7IqBiLmTMLwe8h.pqqzUWwTDjt36"
    },
    {
-        "username": "jill",
+        "username": "JillValentine",
         "email": "jill@valentine.com",
-        "password": "$2b$10$bqd5z4XwqUl9iUreG8QrIO4jZHYelfZ05cIbQeQKkJ2cEIQunKmkK"
+        "password": "$2b$10$WifUIvwCiST75UcRuKlT6OsjFesitndiSHwq9vGYtZctYWj3bwYDC"
+   },
+   {
+        "username": "JackSkellington",
+        "email": "jack@skellington.com",
+        "password": "$2b$10$atXOR3ikfGsZbLeu/v7TwOtrvyv7BrXPDKXrow3UyV.wIaITLal5q"
+   },
+   {
+     "username": "Tiffany ✌🏻",
+     "email": "tiffany@me.com",
+     "password": "$2b$10$mmdjbDp.w.oD0ecg1OrvxegHy7WQkMrgY90m1hGKI/Nvd4NsIMluK"
    }
 ]
