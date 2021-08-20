@@ -55,8 +55,6 @@ The [CMS Tech Blog](https://techblogmvc072021.herokuapp.com/) was created to all
 - **npm start** from command line to connect server.
 - Go to [localhost:3001](http://localhost:3001/) in Web Browser to view.
 
-public/images/home-tech-blog.gif
-
 ## Usage
 
 - [Deployed **CMS Tech Blog**](https://techblogmvc072021.herokuapp.com/).
@@ -87,7 +85,7 @@ Delete Post on **Dashboard**
 ![Delete Post](public/images/delete-post.gif) \
 \
 Access to Comments Once Logged In
-![Access to Comments](public/images/post-comments.gif) \
+![Access to Comments](public/images/access-to-comments.gif) \
 \
 Add a Comment to a Post
 ![Add Comment](public/images/comment-add.gif) \
